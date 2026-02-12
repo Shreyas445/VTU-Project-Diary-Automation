@@ -1,6 +1,6 @@
-# VTU Internship Diary Automation
+# VTU Project Diary Automation
 
-This Python script automates the process of filling out the 18-week internship project diary on the VTU Internship Portal. It uses Selenium WebDriver to log in, navigate the dashboard, and populate weekly entries from a JSON file.
+This Python script automates the process of filling out the 18-week project diary on the VTU Internyet Portal. It uses Selenium WebDriver to log in, navigate the dashboard, and populate weekly entries from a JSON file.
 
 ## 🚀 Features
 
@@ -20,8 +20,8 @@ This Python script automates the process of filling out the 18-week internship p
 
 1.  **Clone this repository** (or download the files):
     ```bash
-    git clone <your-repo-url>
-    cd <your-repo-folder>
+    git clone https://github.com/Shreyas445/VTU-Project-Diary-Automation
+    
     ```
 
 2.  **Install Dependencies**:
@@ -214,3 +214,4 @@ This tool is intended solely for **educational purposes** to demonstrate Python 
 ## 📄 License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
+
