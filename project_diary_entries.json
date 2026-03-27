@@ -1,196 +1,188 @@
 [
     {
         "week": 1,
-        "date": "11-02-2025",
-        "work_summary": "Assigned hardware roles and identified required hardware components for the V2V communication system.",
+        "date": "21-02-2025",
+        "work_summary": "Understood the project concept, finalized the title, and conducted an initial literature survey on AI-based waste classification systems.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "Defined hardware responsibilities and structured the initial project plan.",
+        "learnings_outcomes": "Gained foundational knowledge of smart waste management systems and identified limitations in existing approaches.",
         "skills_used": [
-            "IoT",
-            "Circuit Design"
+            "Machine Learning",
+            "IoT"
         ]
     },
     {
         "week": 2,
-        "date": "17-02-2025",
-        "work_summary": "Compared ESP32 variants and finalized the suitable microcontroller for implementation.",
+        "date": "27-02-2025",
+        "work_summary": "Prepared and refined the project problem statement and objectives through team discussions and reviews.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "Understood controller specifications and selected ESP32 for system development.",
+        "learnings_outcomes": "Developed clarity in defining engineering problems and structuring project objectives.",
         "skills_used": [
-            "IoT",
-            "C++"
+            "Data modeling"
         ]
     },
     {
         "week": 3,
-        "date": "24-02-2025",
-        "work_summary": "Analyzed existing vehicle hardware systems and studied their limitations.",
+        "date": "05-03-2025",
+        "work_summary": "Designed and documented the system block diagram including AI, Raspberry Pi, Arduino, and mechanical components.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "Identified need for optimized and compact circuit architecture.",
+        "learnings_outcomes": "Acquired understanding of system-level architecture design and component interaction.",
         "skills_used": [
-            "Circuit Design",
+            "Embedded Systems",
             "IoT"
         ]
     },
     {
         "week": 4,
-        "date": "14-03-2025",
-        "work_summary": "Prepared system block diagram and finalized hardware architecture.",
+        "date": "11-03-2025",
+        "work_summary": "Developed and verified the system flowchart representing the operational workflow of the project.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "Established signal flow and module connectivity structure.",
+        "learnings_outcomes": "Improved ability to design logical process flows and validate system operations.",
         "skills_used": [
-            "Circuit Design",
-            "IoT"
+            "Data modeling"
         ]
     },
     {
         "week": 5,
-        "date": "18-03-2025",
-        "work_summary": "Conducted literature survey on RF, GPS and embedded modules.",
+        "date": "19-03-2025",
+        "work_summary": "Identified and documented software requirements including Python, TensorFlow, and OpenCV for implementation.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "Learned interfacing concepts for communication modules.",
+        "learnings_outcomes": "Enhanced knowledge of software stack selection for AI-based embedded systems.",
         "skills_used": [
-            "IoT"
+            "Python",
+            "Machine Learning"
         ]
     },
     {
         "week": 6,
-        "date": "22-03-2025",
-        "work_summary": "Designed preliminary hardware circuit and planned module connections.",
+        "date": "27-03-2025",
+        "work_summary": "Documented hardware components such as Arduino, sensors, camera modules, and power supply requirements.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "Achieved feasible circuit design for implementation.",
+        "learnings_outcomes": "Gained practical insight into hardware selection and integration for embedded applications.",
         "skills_used": [
+            "Embedded Systems",
             "Circuit Design"
         ]
     },
     {
         "week": 7,
-        "date": "26-03-2025",
-        "work_summary": "Studied nRF24L01 and GPS interfacing with ESP32.",
+        "date": "03-04-2025",
+        "work_summary": "Analyzed system applications, limitations, and proposed improvements for real-world deployment.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "Finalized correct communication interfacing approach.",
+        "learnings_outcomes": "Developed critical evaluation skills for assessing system feasibility and scalability.",
         "skills_used": [
-            "IoT",
-            "C++"
+            "IoT"
         ]
     },
     {
         "week": 8,
-        "date": "29-03-2025",
-        "work_summary": "Performed breadboard testing of RF and GPS modules.",
+        "date": "17-04-2025",
+        "work_summary": "Compiled and finalized the Phase 1 report including diagrams, documentation, and formatting corrections.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "Verified proper module communication.",
+        "learnings_outcomes": "Improved technical documentation and report structuring skills.",
         "skills_used": [
-            "IoT",
-            "Circuit Design"
+            "Canva"
         ]
     },
     {
         "week": 9,
-        "date": "05-04-2025",
-        "work_summary": "Interfaced OLED display and motion sensors with ESP32.",
+        "date": "21-05-2025",
+        "work_summary": "Completed Phase 1 review, incorporated feedback, and finalized documentation and logbook preparation.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "Achieved accurate sensor readings and display output.",
+        "learnings_outcomes": "Understood the importance of iterative review and academic documentation standards.",
         "skills_used": [
-            "C++",
-            "Circuit Design",
-            "IoT"
+            "Git"
         ]
     },
     {
         "week": 10,
-        "date": "21-04-2025",
-        "work_summary": "Integrated LiPo battery, charging module and power circuit.",
+        "date": "22-08-2025",
+        "work_summary": "Planned Phase 2 testing strategy including defining test cases for AI detection and sorting mechanisms.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "Established stable power supply for system operation.",
+        "learnings_outcomes": "Learned systematic test planning and validation techniques for integrated systems.",
         "skills_used": [
-            "Circuit Design"
+            "Machine Learning"
         ]
     },
     {
         "week": 11,
-        "date": "03-05-2025",
-        "work_summary": "Tested complete hardware circuit and resolved minor issues.",
+        "date": "03-09-2025",
+        "work_summary": "Performed functional testing, identified system issues, and implemented bug fixes related to classification and hardware response.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "Confirmed hardware stability and functionality.",
+        "learnings_outcomes": "Gained experience in debugging AI models and hardware synchronization issues.",
         "skills_used": [
-            "Circuit Design",
-            "IoT"
+            "Python",
+            "Embedded Systems"
         ]
     },
     {
         "week": 12,
-        "date": "04-08-2025",
-        "work_summary": "Reassembled hardware modules for Phase-II integration.",
+        "date": "09-09-2025",
+        "work_summary": "Conducted re-testing of the system after corrections and recorded performance improvements.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "System prepared for advanced testing.",
+        "learnings_outcomes": "Enhanced understanding of iterative testing and system performance validation.",
         "skills_used": [
-            "IoT",
-            "Circuit Design"
+            "Machine Learning"
         ]
     },
     {
         "week": 13,
-        "date": "11-08-2025",
-        "work_summary": "Tested GPS accuracy and RF communication stability.",
+        "date": "16-09-2025",
+        "work_summary": "Analyzed system performance metrics such as accuracy, response time, and operational consistency.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "Observed reliable real-time data transmission.",
+        "learnings_outcomes": "Developed skills in interpreting experimental results and evaluating system efficiency.",
         "skills_used": [
-            "IoT",
-            "C++"
+            "Data modeling"
         ]
     },
     {
         "week": 14,
-        "date": "21-08-2025",
-        "work_summary": "Optimized hardware wiring and reduced interference.",
+        "date": "25-09-2025",
+        "work_summary": "Validated system reliability through repeated testing cycles and performance observation.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "Improved signal quality and circuit stability.",
+        "learnings_outcomes": "Learned methods for reliability testing and ensuring system stability.",
         "skills_used": [
-            "Circuit Design"
+            "Embedded Systems"
         ]
     },
     {
         "week": 15,
-        "date": "26-08-2025",
-        "work_summary": "Conducted real-time system testing with all modules active.",
+        "date": "09-10-2025",
+        "work_summary": "Documented Phase 2 testing results, observations, and improvements in a structured format.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "Verified smooth simultaneous module operation.",
+        "learnings_outcomes": "Improved technical writing and result documentation capabilities.",
         "skills_used": [
-            "IoT",
-            "C++"
+            "Canva"
         ]
     },
     {
         "week": 16,
-        "date": "13-09-2025",
-        "work_summary": "Verified battery backup and charging safety.",
+        "date": "29-10-2025",
+        "work_summary": "Prepared and refined the final project report including corrections in formatting, grammar, and technical content.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "Confirmed reliable and efficient power management.",
+        "learnings_outcomes": "Gained proficiency in preparing professional academic reports.",
         "skills_used": [
-            "Circuit Design"
+            "Canva"
         ]
     },
     {
         "week": 17,
-        "date": "10-11-2025",
-        "work_summary": "Performed final hardware checks and prepared for demonstration.",
+        "date": "07-11-2025",
+        "work_summary": "Prepared demonstration documentation outlining system workflow and presentation points.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "System verified and demo-ready.",
+        "learnings_outcomes": "Learned effective presentation planning and demonstration structuring.",
         "skills_used": [
-            "IoT",
-            "Circuit Design"
+            "Canva"
         ]
     },
     {
         "week": 18,
-        "date": "08-12-2025",
-        "work_summary": "Successfully demonstrated complete hardware system.",
+        "date": "10-12-2025",
+        "work_summary": "Conducted final project review, demonstration, and successfully submitted the report and logbook.",
         "hours_worked": 6.0,
-        "learnings_outcomes": "Project completed successfully with validated results.",
+        "learnings_outcomes": "Achieved comprehensive understanding of end-to-end project execution and presentation.",
         "skills_used": [
             "IoT",
-            "Circuit Design"
+            "Embedded Systems"
         ]
     }
 ]

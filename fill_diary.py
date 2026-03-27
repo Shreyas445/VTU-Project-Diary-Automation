@@ -164,44 +164,89 @@ def fill_diary_entries():
                 year_xpath = "/html/body/div[3]/div/div/div/div/div/div/span[2]/select"
                 print(f"  Debug: Selecting Year '{target_year}' via {year_xpath}")
                 year_elem = wait.until(EC.presence_of_element_located((By.XPATH, year_xpath)))
-                Select(year_elem).select_by_visible_text(target_year)
-                time.sleep(0.5)
+                try:
+                    Select(year_elem).select_by_visible_text(target_year)
+                except Exception as e:
+                    print(f"  > Standard year select failed: {e}. Trying send_keys.")
+                    year_elem.send_keys(target_year)
+                time.sleep(1) # Let React rerender the calendar table
                 
                 # 3. Select Month
                 month_xpath = "/html/body/div[3]/div/div/div/div/div/div/span[1]/select"
                 print(f"  Debug: Selecting Month '{target_month}' via {month_xpath}")
-                month_elem = driver.find_element(By.XPATH, month_xpath)
-                Select(month_elem).select_by_visible_text(target_month)
-                time.sleep(0.5)
+                month_elem = wait.until(EC.presence_of_element_located((By.XPATH, month_xpath)))
+                sel_m = Select(month_elem)
+                try:
+                    sel_m.select_by_visible_text(target_month)
+                except Exception as e:
+                    print(f"  > Standard month select failed: {e}. Trying send_keys.")
+                    month_elem.send_keys(target_month)
+                
+                time.sleep(1) # CRITICAL: Wait for React to render the NEW month's days before clicking!
+                
+                # Check Month
+                curr_month = sel_m.first_selected_option.text
+                if target_month.lower() not in curr_month.lower():
+                     print(f"  > WARNING: Month might be wrong! Expected: {target_month}, Found: {curr_month}")
 
                 # 4. Click Day (Dynamic)
                 print(f"  Debug: Picking day: {target_day}")
-                # Try finding button in the calendar container (div[3]) with text match
-                # WE USE starts-with or exact text match logic for buttons
-                day_xpath = f"/html/body/div[3]//button[normalize-space(text())='{target_day}']"
+                day_xpath = f"/html/body/div[3]/div/div/div/div/table/tbody//button[normalize-space(text())='{target_day}']"
                 days = driver.find_elements(By.XPATH, day_xpath)
                 
                 clicked_day = False
-                # Try to click the one that is displayed (e.g. current month)
                 for d in days:
-                    try:
-                        if d.is_displayed():
-                            d.click()
+                    if d.is_displayed():
+                        cls = d.get_attribute("class") or ""
+                        try:
+                            parent_cls = d.find_element(By.XPATH, "..").get_attribute("class") or ""
+                        except:
+                            parent_cls = ""
+                        aria_hidden = d.get_attribute("aria-hidden") or "false"
+                        disabled = d.get_attribute("disabled")
+                        
+                        # Radix UI / Shadcn often put 'outside' on the parent <td> or the button itself
+                        if "outside" not in cls.lower() and "outside" not in parent_cls.lower() and aria_hidden != "true" and not disabled:
+                            force_click(d)
                             clicked_day = True
+                            print(f"    > Clicked primary day button: {target_day}")
                             break
-                    except: pass
                 
+                # Fallback if primary not found
                 if not clicked_day and days:
-                    force_click(days[0]) # Fallback
-                    clicked_day = True
-                    
-                if clicked_day:
-                     print("Date picked.")
-                else:
+                    for d in days:
+                        if d.is_displayed():
+                            force_click(d)
+                            clicked_day = True
+                            print(f"    > Clicked fallback day button: {target_day}")
+                            break
+                            
+                if not clicked_day:
                      print("  > WARNING: Could not find clickable day button.")
+                     
+                time.sleep(1.5)
+                
+                # 5. VERIFICATION
+                print("  Debug: Verifying selected date...")
+                date_btn_check = driver.find_element(By.XPATH, date_btn_xpath)
+                btn_text = date_btn_check.text.lower()
+                
+                if target_year in btn_text and target_day in btn_text and target_month.lower() in btn_text:
+                    print(f"  > Date Verified Successfully: {date_btn_check.text}")
+                elif entry['date'] in btn_text or dt.strftime("%Y-%m-%d") in btn_text or dt.strftime("%m/%d/%Y") in btn_text:
+                    print(f"  > Date Verified Successfully (Numeric): {date_btn_check.text}")
+                else:
+                    if "pick a date" not in btn_text:
+                        print(f"  > CRITICAL ERROR: Date Verification Failed! Button text: '{date_btn_check.text}', Expected parts: {target_day}, {target_month}, {target_year}")
+                        raise Exception(f"Date Verification Failed for Week {entry['week']}")
+                    else:
+                        print("  > CRITICAL ERROR: Date not picked ('Pick a Date' still present).")
+                        raise Exception(f"Date Verification Failed for Week {entry['week']}")
 
             except Exception as e:
                 print(f"  > Date error: {e}")
+                print("  > HALTING AUTOMATION DUE TO CRITICAL DATE ERROR.")
+                return # STOP AUTOMATION completely
 
             time.sleep(1)
 
