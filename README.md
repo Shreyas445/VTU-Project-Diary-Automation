@@ -2,6 +2,13 @@
 
 This Python script automates the process of filling out the 18-week project diary on the VTU Internyet Portal. It uses Selenium WebDriver to log in, navigate the dashboard, and populate weekly entries from a JSON file.
 
+### how to use?
+
+----> [click here to see video](https://www.linkedin.com/posts/shreyasks-in_vtu-project-diary-automation-from-logbook-activity-7428160530718212096-75_t?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFUHwaUBvLYtbumY6f-wZSyXkm4t-y8--sw)
+
+ 
+<br>
+
 ## 🚀 Features
 
 *   **Automated Login**: Securely logs in using credentials stored in a local JSON file.
@@ -214,3 +221,14 @@ This tool is intended solely for **educational purposes** to demonstrate Python 
 ## 📄 License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+## Looking for something else?
+
+[click here to automatically fill OEC PEC Cources of the VTU NPTL Videos](https://github.com/Shreyas445/VTU-Course-Filler)
+> it automatically make the video progress bar to 100%
+
+[click here to fill Internship diary automatically](https://github.com/Shreyas445/VTU-Internship-diary-Automation)
+> it automatically fills all the vtu internship dairy entries with AI
+
+[click here to fill the Internship Report Automatically](https://vtu-report-fill.netlify.app/)
+> it automatically makes you a .docx file report containiing all your details with format specified by the collage
